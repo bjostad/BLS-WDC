@@ -12,7 +12,8 @@
             {id: "seriesID", alias: "seriesID", dataType: tableau.dataTypeEnum.string},
             {id: "year", alias: "Year", dataType: tableau.dataTypeEnum.int},
             {id: "period", alias: "Period", dataType: tableau.dataTypeEnum.string}, 
-            {id: "periodName", alias: "Month", dataType: tableau.dataTypeEnum.string}, 
+            {id: "month", alias: "Month", dataType: tableau.dataTypeEnum.string},
+            {id: "fullDate", alias: "Full Date", dataType: tableau.dataTypeEnum.string},  
             {id: "value", alias: "value", dataType: tableau.dataTypeEnum.int}, 
             {id: "footnotes", alias: "footnotes", dataType: tableau.dataTypeEnum.string}            
         ];
@@ -58,11 +59,15 @@
 
 
                     for (var i = 0, len = obj.data.length; i < len; i++) {
+
+                        var calcDate = (obj.data[i].periodName + " 1, " + obj.data[i].year);
+
                         tableData.push({
                             "seriesID": obj.seriesID,
                             "year": obj.data[i].year,
                             "period": obj.data[i].period,
-                            "periodName": obj.data[i].periodName,
+                            "month": obj.data[i].periodName,
+                            "fullDate": calcDate,
                             "value": obj.data[i].value,
                             "footnotes": obj.data[i].footnotes[0].text
                         });
