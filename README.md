@@ -5,4 +5,4 @@ This is a web data connector for Tableau which will connect Tableau to the BLS U
 
 In order to use this WDC, seriesIDs will need to be provided (comma seperated). A free API key will also need to be entered.
 
-# Connect to this WDC from Tableau Desktop at http://bjostad.github.io
+# Connect to this WDC from Tableau Desktop at https://www.bjo.io
